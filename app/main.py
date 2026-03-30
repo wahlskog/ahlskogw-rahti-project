@@ -13,6 +13,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+rooms_db = [
+    {"key": 1001, "name": "Room 1", "available": True},
+    {"key": 1002, "name": "Room 2", "available": False},
+    {"key": 1003, "name": "Room 3", "available": True}
+]
+
+@app.get("/rooms")
+def get_rooms():
+    return rooms_db
+
 @app.get("/")
 def read_root():
     return { "msg": "Hello local docker"}
