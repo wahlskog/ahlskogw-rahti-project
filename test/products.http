@@ -13,7 +13,7 @@ Content-Type: application/json
       "price": 49
     }
 
-### Update a product
+### Update a product (PATCH)
 PATCH {{apiUrl}}/1001
 Content-Type: application/json
 
@@ -21,6 +21,14 @@ Content-Type: application/json
       "price": 29
     }
 
+### Update a product (PUT)
+PUT {{apiUrl}}/1001
+Content-Type: application/json
+
+    {
+        "name": "Shirt",
+      "price": 25
+    }
 
 ### Delete a product
 DELETE {{apiUrl}}/1005
